@@ -1,12 +1,4 @@
 
-# please first pip install modbus_tk, using 'pip install modbus_tk'
-# -*- coding: utf-8 -*-
-
-"""
-Created 01/30/2023
-@author: ColinChu
-"""
-
 import modbus_tk
 import modbus_tk.defines as cst
 import modbus_tk.modbus_tcp as modbus_tcp
@@ -18,7 +10,6 @@ from datetime import datetime
 import pytz
 import threading
 import pyvisa as visa
-# Tesla Python #
 from uds_client_application import Uds_Client_Application
 import canapi2.dll_utils
 logger = modbus_tk.utils.create_logger("console")
