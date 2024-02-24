@@ -10,7 +10,8 @@ df = pd.read_excel(file_path)
 # 定义X轴和Y轴的数据段
 x_segments = [(1, 12), (14, 26), (28, 40), (42, 54), (56, 68), (70, 82), (84, 96), (98, 110), (112, 124)]
 y_segments = [(1, 12), (14, 26), (28, 40), (42, 54), (56, 68), (70, 82), (84, 96), (98, 110), (112, 124)]
-
+x_segments_2 = [(1, 12), (14, 26), (28, 40), (42, 54), (56, 68), (70, 82), (84, 96), (98, 110), (112, 124)]
+y_segments_2 = [(1, 12), (14, 26), (28, 40), (42, 54), (56, 68), (70, 82), (84, 96), (98, 110), (112, 124)]
 # 确保X轴和Y轴的数据段数量相同
 assert len(x_segments) == len(y_segments), "X and Y segments must have the same number of data segments."
 markers = ['*', 'o', 'x', '+', '*', '*', '*', '*', '*']
@@ -37,7 +38,7 @@ y_ticks = np.arange(60, 85, 2)
 plt.yticks(y_ticks)
 
 plt.figure(2)
-for i, (x_segments_2, y_segments_2) in enumerate(zip(x_segments, y_segments)):
+for i, (x_segments_2, y_segments_2) in enumerate(zip(x_segments_2, y_segments_2)):
     x_values_2 = df['Load current(A)'].iloc[x_segments_2[0]:x_segments_2[1]+1]
     y_values_2 = df['Load power(W)'].iloc[y_segments_2[0]:y_segments_2[1]+1]
     marker = markers[i % len(markers)]
